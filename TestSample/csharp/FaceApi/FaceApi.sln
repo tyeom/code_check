@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceApiClient", "FaceApiClient\FaceApiClient.csproj", "{FBFFDC51-406F-4221-AE39-B1AC5FE61B34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceAPI", "FaceAPI\FaceAPI.csproj", "{5CE17F66-31FB-4DDC-83CB-95AC3F9AD955}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBFFDC51-406F-4221-AE39-B1AC5FE61B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFFDC51-406F-4221-AE39-B1AC5FE61B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFFDC51-406F-4221-AE39-B1AC5FE61B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFFDC51-406F-4221-AE39-B1AC5FE61B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CE17F66-31FB-4DDC-83CB-95AC3F9AD955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE17F66-31FB-4DDC-83CB-95AC3F9AD955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE17F66-31FB-4DDC-83CB-95AC3F9AD955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE17F66-31FB-4DDC-83CB-95AC3F9AD955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0A7C361-72B2-4DF2-8924-82D48F37BF42}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,24 @@
+﻿<Window x:Class="FaceApiClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FaceApiClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0">
+            <Button x:Name="xLocal" Content="Local" Click="Local_Click" />
+            <Button x:Name="xRemote" Content="Remote" Click="Remote_Click" />
+        </StackPanel>
+
+        <Border Grid.Row="1">
+            <Image x:Name="xImg" />
+        </Border>
+    </Grid>
+</Window>
