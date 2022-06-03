@@ -1,0 +1,5 @@
+C:\Users\banaple_43\source\repos\WpfApp7\Play\obj\Debug\Play.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\Play\bin\Debug\Play.dll
+C:\Users\banaple_43\source\repos\WpfApp7\Play\bin\Debug\Play.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\Play\obj\Debug\Play.dll
+C:\Users\banaple_43\source\repos\WpfApp7\Play\obj\Debug\Play.pdb

@@ -1,0 +1,11 @@
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\bin\Release\WindowsFormsApp2.exe.config
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\bin\Release\WindowsFormsApp2.exe
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\bin\Release\WindowsFormsApp2.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.SuggestedBindingRedirects.cache
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\obj\Release\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\obj\Release\WindowsFormsApp2.exe
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\obj\Release\WindowsFormsApp2.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\WindowsFormsApp2\obj\Release\WindowsFormsApp2.Person.resources

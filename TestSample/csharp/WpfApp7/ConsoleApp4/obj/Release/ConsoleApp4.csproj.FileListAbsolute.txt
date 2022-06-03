@@ -1,0 +1,2 @@
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp4\obj\Release\ConsoleApp4.csproj.AssemblyReference.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp4\obj\Release\ConsoleApp4.csproj.CoreCompileInputs.cache

@@ -1,0 +1,5 @@
+C:\Users\banaple_43\source\repos\WpfApp7\Play\bin\Release\Play.dll
+C:\Users\banaple_43\source\repos\WpfApp7\Play\bin\Release\Play.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\Play\obj\Release\Play.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\Play\obj\Release\Play.dll
+C:\Users\banaple_43\source\repos\WpfApp7\Play\obj\Release\Play.pdb

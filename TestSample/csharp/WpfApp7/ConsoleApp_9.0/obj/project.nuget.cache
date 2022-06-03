@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aurZymgJPlkyNUXJUFrrC2CGcuyffreYp4fdW7TuvjEPPUvo96W2tVWjWYsJSG3pxr7qm4M4L8//W/Cxs3tR6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\banaple_43\\source\\repos\\WpfApp7\\ConsoleApp_9.0\\ConsoleApp_9.0.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\banaple_43\\.nuget\\packages\\netcore.encrypt\\2.1.0\\netcore.encrypt.2.1.0.nupkg.sha512",
+    "C:\\Users\\banaple_43\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

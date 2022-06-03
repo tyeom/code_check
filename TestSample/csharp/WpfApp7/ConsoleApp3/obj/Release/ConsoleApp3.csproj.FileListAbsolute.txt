@@ -1,0 +1,7 @@
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp3\obj\Release\ConsoleApp3.csproj.AssemblyReference.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp3\obj\Release\ConsoleApp3.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp3\bin\Release\ConsoleApp3.exe.config
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp3\bin\Release\ConsoleApp3.exe
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp3\bin\Release\ConsoleApp3.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp3\obj\Release\ConsoleApp3.exe
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp3\obj\Release\ConsoleApp3.pdb

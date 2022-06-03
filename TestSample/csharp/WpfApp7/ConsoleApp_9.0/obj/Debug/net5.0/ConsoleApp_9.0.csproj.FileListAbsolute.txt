@@ -1,0 +1,16 @@
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\bin\Debug\net5.0\ConsoleApp_9.0.exe
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\bin\Debug\net5.0\ConsoleApp_9.0.deps.json
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\bin\Debug\net5.0\ConsoleApp_9.0.runtimeconfig.json
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\bin\Debug\net5.0\ConsoleApp_9.0.runtimeconfig.dev.json
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\bin\Debug\net5.0\ConsoleApp_9.0.dll
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\bin\Debug\net5.0\ConsoleApp_9.0.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ConsoleApp_9.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ConsoleApp_9.0.AssemblyInfoInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ConsoleApp_9.0.AssemblyInfo.cs
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ConsoleApp_9.0.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ConsoleApp_9.0.dll
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ref\ConsoleApp_9.0.dll
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ConsoleApp_9.0.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ConsoleApp_9.0.genruntimeconfig.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\ConsoleApp_9.0.csproj.AssemblyReference.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Debug\net5.0\refint\ConsoleApp_9.0.dll

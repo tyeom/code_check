@@ -1,0 +1,125 @@
+﻿[
+  {
+    "isShowTypeColor": false,
+    "order": 1,
+    "showType": "none",
+    "showTypeColor": false,
+    "skuPropertyId": 200000226,
+    "skuPropertyName": "보석 색상",
+    "skuPropertyValues": [
+      {
+        "propertyValueDisplayName": "WHITE",
+        "propertyValueId": 29,
+        "propertyValueIdLong": 29,
+        "propertyValueName": "WHITE",
+        "skuColorValue": "#FFFFFF",
+        "skuPropertyImagePath": "https://ae01.alicdn.com/kf/Hcaa5fe23591943cc8c13d89d2b9d23ecN/Hamsa-MOP-925-Chocker.jpg_640x640.jpg",
+        "skuPropertyImageSummPath": "https://ae01.alicdn.com/kf/Hcaa5fe23591943cc8c13d89d2b9d23ecN/Hamsa-MOP-925-Chocker.jpg_50x50.jpg",
+        "skuPropertyTips": "WHITE",
+        "skuPropertyValueShowOrder": 1,
+        "skuPropertyValueTips": "WHITE"
+      },
+      {
+        "propertyValueDisplayName": "Black",
+        "propertyValueId": 193,
+        "propertyValueIdLong": 193,
+        "propertyValueName": "Black",
+        "skuColorValue": "#000000",
+        "skuPropertyImagePath": "https://ae01.alicdn.com/kf/H53a9a854c2c042d8b51ef7094d7a6b7ag/Hamsa-MOP-925-Chocker.jpg_640x640.jpg",
+        "skuPropertyImageSummPath": "https://ae01.alicdn.com/kf/H53a9a854c2c042d8b51ef7094d7a6b7ag/Hamsa-MOP-925-Chocker.jpg_50x50.jpg",
+        "skuPropertyTips": "Black",
+        "skuPropertyValueShowOrder": 1,
+        "skuPropertyValueTips": "Black"
+      },
+      {
+        "propertyValueDisplayName": "green",
+        "propertyValueId": 175,
+        "propertyValueIdLong": 175,
+        "propertyValueName": "green",
+        "skuColorValue": "#007000",
+        "skuPropertyImagePath": "https://ae01.alicdn.com/kf/H4534f1ea6c164ae5a772652a249d4adeE/Hamsa-MOP-925-Chocker.jpg_640x640.jpg",
+        "skuPropertyImageSummPath": "https://ae01.alicdn.com/kf/H4534f1ea6c164ae5a772652a249d4adeE/Hamsa-MOP-925-Chocker.jpg_50x50.jpg",
+        "skuPropertyTips": "green",
+        "skuPropertyValueShowOrder": 1,
+        "skuPropertyValueTips": "green"
+      },
+      {
+        "propertyValueDisplayName": "빨간",
+        "propertyValueId": 10,
+        "propertyValueIdLong": 10,
+        "propertyValueName": "빨간",
+        "skuColorValue": "#FF0000",
+        "skuPropertyImagePath": "https://ae01.alicdn.com/kf/Hef44688cc0f74177b1a3a2053072d113r/Hamsa-MOP-925-Chocker.jpg_640x640.jpg",
+        "skuPropertyImageSummPath": "https://ae01.alicdn.com/kf/Hef44688cc0f74177b1a3a2053072d113r/Hamsa-MOP-925-Chocker.jpg_50x50.jpg",
+        "skuPropertyTips": "빨간",
+        "skuPropertyValueShowOrder": 1,
+        "skuPropertyValueTips": "빨간"
+      },
+      {
+        "propertyValueDisplayName": "파란",
+        "propertyValueId": 173,
+        "propertyValueIdLong": 173,
+        "propertyValueName": "파란",
+        "skuColorValue": "#0080FF",
+        "skuPropertyImagePath": "https://ae01.alicdn.com/kf/H2a15cf6067da4efa9795c794461a3a1ag/Hamsa-MOP-925-Chocker.jpg_640x640.jpg",
+        "skuPropertyImageSummPath": "https://ae01.alicdn.com/kf/H2a15cf6067da4efa9795c794461a3a1ag/Hamsa-MOP-925-Chocker.jpg_50x50.jpg",
+        "skuPropertyTips": "파란",
+        "skuPropertyValueShowOrder": 1,
+        "skuPropertyValueTips": "파란"
+      },
+      {
+        "propertyValueDisplayName": "옐로우",
+        "propertyValueId": 366,
+        "propertyValueIdLong": 366,
+        "propertyValueName": "옐로우",
+        "skuColorValue": "#FFFF00",
+        "skuPropertyImagePath": "https://ae01.alicdn.com/kf/H92d7fd09b8f646dbb3b84f662369bd42y/Hamsa-MOP-925-Chocker.jpg_640x640.jpg",
+        "skuPropertyImageSummPath": "https://ae01.alicdn.com/kf/H92d7fd09b8f646dbb3b84f662369bd42y/Hamsa-MOP-925-Chocker.jpg_50x50.jpg",
+        "skuPropertyTips": "옐로우",
+        "skuPropertyValueShowOrder": 1,
+        "skuPropertyValueTips": "옐로우"
+      }
+    ]
+  },
+
+
+
+
+
+
+
+  {
+    "isShowTypeColor": false,
+    "order": 4,
+    "showType": "none",
+    "showTypeColor": false,
+    "skuPropertyId": 200000639,
+    "skuPropertyName": "길이",
+    "skuPropertyValues": [
+      {
+        "propertyValueDisplayName": "40cm",
+        "propertyValueId": 883,
+        "propertyValueIdLong": 883,
+        "propertyValueName": "40cm",
+        "skuColorValue": null,
+        "skuPropertyImagePath": null,
+        "skuPropertyImageSummPath": null,
+        "skuPropertyTips": "40cm",
+        "skuPropertyValueShowOrder": 2,
+        "skuPropertyValueTips": "40cm"
+      },
+      {
+        "propertyValueDisplayName": "45cm",
+        "propertyValueId": 200661028,
+        "propertyValueIdLong": 200661028,
+        "propertyValueName": "45cm",
+        "skuColorValue": null,
+        "skuPropertyImagePath": null,
+        "skuPropertyImageSummPath": null,
+        "skuPropertyTips": "45cm",
+        "skuPropertyValueShowOrder": 2,
+        "skuPropertyValueTips": "45cm"
+      }
+    ]
+  }
+]

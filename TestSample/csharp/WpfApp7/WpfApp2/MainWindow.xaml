@@ -1,0 +1,120 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Name="xMainWindow"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:CollectionToCountConverter x:Key="CollectionToCountConverter" />
+    </Window.Resources>
+    
+    <Grid>
+        <TabControl x:Name="xMenuTabControl"
+                    ItemsSource="{Binding MenuList}"
+                    Margin="0, 0, 0, 0">
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TabItem}">
+                                <Grid Height="70"
+                                      Width="150"
+                                      Margin="0, 0, -1, -3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Border x:Name="xBorder1" 
+                                                    Grid.Row="0"
+                                                    Height="6"
+                                                    Background="#FFD7DEE4"/>
+                                    <Border x:Name="xBorder2" 
+                                                    Grid.Row="1"
+                                                    BorderBrush="#FFD7DEE4"
+                                                    BorderThickness="1, 2, 1, 1"
+                                                    Background="#FFEBF0F5"/>
+                                    <TextBlock x:Name="xHeaderTxt"
+                                                       Grid.Row="1"
+                                                       Text="{Binding MenuName}"
+                                                       TextWrapping="Wrap"
+                                                       TextAlignment="Center"
+                                                       Foreground="#FF7E8AA2"
+                                                       HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center"/>
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected"
+                                                     Value="True">
+                                        <Setter TargetName="xBorder1"
+                                                        Property="Background"
+                                                        Value="#FFEA5F85" />
+                                        <Setter TargetName="xBorder2"
+                                                        Property="Background"
+                                                        Value="#FFFEF6F6" />
+                                        <Setter TargetName="xBorder2"
+                                                        Property="BorderThickness"
+                                                        Value="1, 2, 1, 0" />
+                                        <Setter TargetName="xHeaderTxt"
+                                                        Property="Foreground"
+                                                        Value="#FFEA5F85" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.ItemContainerStyle>
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Button Content="{Binding Desc}"
+                                Command="{Binding ElementName=xMainWindow, Path=DataContext.ShowDescMsgPopup}"
+                                CommandParameter="{Binding Desc}"/>
+                    </Grid>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+        
+        <!--Loading Control-->
+        <Viewbox>
+            <local:LoadingControl>
+                <local:LoadingControl.Style>
+                    <Style TargetType="local:LoadingControl">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=xMenuTabControl,
+                                                           Path=ItemsSource,
+                                Converter={StaticResource CollectionToCountConverter}}"
+                                         Value="0">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </local:LoadingControl.Style>
+            </local:LoadingControl>
+        </Viewbox>
+        <!--Loading Control END-->
+        
+        <!--MessageBox Popup-->
+        <local:MessagePopUpBox x:Name="xMsgBox_OK"
+                               HAlignment="Center"
+                               VAlignment="Center"
+                               IsOpen="{Binding ShowMessagePopup, Mode=TwoWay}"
+                               Width="550"
+                               IsBackgroundDisable="True"
+                               MessagePopUpBoxType="Confirm">
+            <TextBlock x:Name="xTxtMsgBox"
+                       Text="{Binding SelectedMenuDesc}"
+                       TextAlignment="Center"
+                       MinWidth="550"
+                       FontSize="25"
+                       FontWeight="ExtraBold"
+                       Margin="0, 0, 0, 0"/>
+        </local:MessagePopUpBox>
+        <!--MessageBox Popup END-->
+    </Grid>
+</Window>

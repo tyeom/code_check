@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow">
+
+    <Window.Resources>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border BorderBrush="{x:Null}">
+                                <TextBlock Text="{TemplateBinding Content}"
+                                           Width="42"
+                                           Height="35"
+                                           Foreground="{TemplateBinding Foreground}"
+                                           Background="{TemplateBinding Background}"
+                                           HorizontalAlignment="Stretch"
+                                           
+                                           VerticalAlignment="Center"/>
+                                
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Border BorderBrush="Red"
+                BorderThickness="2"
+                Width="200"
+                Height="300">
+            <Button Width="200"
+                    Height="300" Content="버튼!!"
+                Background="Green"
+                Foreground="Yellow"
+                Click="Button_Click_1"
+                Style="{StaticResource BtnStyle}"/>
+        </Border>
+
+        <StackPanel Orientation="Vertical">
+            <TextBox Text="{Binding AAA, StringFormat={}{0}dpi}" Foreground="{Binding aa}">
+                <!--<TextBox.Foreground>
+                    <SolidColorBrush Color="{Binding bb, IsAsync=True, TargetNullValue='Red', FallbackValue='Blue'}" />
+                </TextBox.Foreground>-->
+            </TextBox>
+            <Button Command="{Binding DefaultActionCommand}" >sdfsdf</Button>
+
+            <RichTextBox x:Name="xRichTextBox" />
+            <RichTextBox x:Name="xRichTextBox2" TextBoxBase.TextChanged="RichTextBox_TextChanged"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

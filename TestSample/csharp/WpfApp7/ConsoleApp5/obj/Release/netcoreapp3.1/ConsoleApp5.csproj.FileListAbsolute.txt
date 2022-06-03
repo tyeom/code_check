@@ -1,0 +1,13 @@
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\obj\Release\netcoreapp3.1\ConsoleApp5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\obj\Release\netcoreapp3.1\ConsoleApp5.AssemblyInfoInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\obj\Release\netcoreapp3.1\ConsoleApp5.AssemblyInfo.cs
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\obj\Release\netcoreapp3.1\ConsoleApp5.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\bin\Release\netcoreapp3.1\ConsoleApp5.exe
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\bin\Release\netcoreapp3.1\ConsoleApp5.deps.json
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\bin\Release\netcoreapp3.1\ConsoleApp5.runtimeconfig.json
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\bin\Release\netcoreapp3.1\ConsoleApp5.runtimeconfig.dev.json
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\bin\Release\netcoreapp3.1\ConsoleApp5.dll
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\bin\Release\netcoreapp3.1\ConsoleApp5.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\obj\Release\netcoreapp3.1\ConsoleApp5.dll
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\obj\Release\netcoreapp3.1\ConsoleApp5.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp5\obj\Release\netcoreapp3.1\ConsoleApp5.genruntimeconfig.cache

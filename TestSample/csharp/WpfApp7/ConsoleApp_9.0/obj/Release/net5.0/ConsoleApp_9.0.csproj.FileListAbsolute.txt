@@ -1,0 +1,5 @@
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Release\net5.0\ConsoleApp_9.0.csproj.AssemblyReference.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Release\net5.0\ConsoleApp_9.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Release\net5.0\ConsoleApp_9.0.AssemblyInfoInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Release\net5.0\ConsoleApp_9.0.AssemblyInfo.cs
+C:\Users\banaple_43\source\repos\WpfApp7\ConsoleApp_9.0\obj\Release\net5.0\ConsoleApp_9.0.csproj.CoreCompileInputs.cache

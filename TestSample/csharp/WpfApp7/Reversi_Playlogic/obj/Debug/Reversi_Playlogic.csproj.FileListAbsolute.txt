@@ -1,0 +1,9 @@
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\bin\Debug\Reversi_Playlogic.dll
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\bin\Debug\Reversi_Playlogic.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\bin\Debug\Play.dll
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\bin\Debug\Play.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.csproj.CopyComplete
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.dll
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.csproj.AssemblyReference.cache

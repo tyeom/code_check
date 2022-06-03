@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="WpfApp12.LineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp12"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:EllipseGeometryCenterConverter x:Key="EllipseGeometryCenterConverter" />
+    </UserControl.Resources>
+    <ItemsControl ItemsSource="{Binding Lines, UpdateSourceTrigger=PropertyChanged}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <Canvas />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <Canvas>
+                    <Polyline Points="{Binding LinePoints, UpdateSourceTrigger=PropertyChanged}"
+                              StrokeThickness="2.0"
+                              Stroke="Blue" />
+
+                    <ItemsControl ItemsSource="{Binding LinePoints,  UpdateSourceTrigger=PropertyChanged}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Path StrokeThickness="5.0"
+                                      Stroke="Red"
+                                      Fill="MistyRose">
+                                    <Path.Data>
+                                        <EllipseGeometry Center="{Binding ., Converter={StaticResource EllipseGeometryCenterConverter}}"
+                                                         RadiusX="4"
+                                                         RadiusY="4" />
+                                    </Path.Data>
+                                </Path>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Canvas>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</UserControl>

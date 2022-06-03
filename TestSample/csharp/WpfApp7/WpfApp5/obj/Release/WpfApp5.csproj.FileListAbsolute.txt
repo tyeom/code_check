@@ -1,0 +1,15 @@
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\bin\Release\WpfApp5.exe.config
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\bin\Release\WpfApp5.exe
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\bin\Release\WpfApp5.pdb
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5.csproj.AssemblyReference.cache
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\MainWindow.g.cs
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\App.g.cs
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5_MarkupCompile.cache
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5_MarkupCompile.lref
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\MainWindow.baml
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5.g.resources
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5.Properties.Resources.resources
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5.csproj.GenerateResource.cache
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5.exe
+C:\Users\banaple_43\source\repos\WpfApp7\WpfApp5\obj\Release\WpfApp5.pdb
