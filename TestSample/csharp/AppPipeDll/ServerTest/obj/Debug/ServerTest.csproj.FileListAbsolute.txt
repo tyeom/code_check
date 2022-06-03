@@ -1,0 +1,13 @@
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\bin\Debug\ServerTest.exe
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\bin\Debug\AppPipe.dll
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\bin\Debug\ServerTest.exe.config
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\bin\Debug\ServerTest.pdb
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\bin\Debug\AppPipe.pdb
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\obj\Debug\ServerTest.csprojAssemblyReference.cache
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\obj\Debug\ServerTest.Form1.resources
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\obj\Debug\ServerTest.Properties.Resources.resources
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\obj\Debug\ServerTest.csproj.GenerateResource.cache
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\obj\Debug\ServerTest.csproj.CoreCompileInputs.cache
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\obj\Debug\ServerTest.csproj.CopyComplete
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\obj\Debug\ServerTest.exe
+C:\Users\banaple_43\source\repos\AppPipeDll\ServerTest\obj\Debug\ServerTest.pdb
