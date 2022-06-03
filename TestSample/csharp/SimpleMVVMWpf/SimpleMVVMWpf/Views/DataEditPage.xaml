@@ -1,0 +1,45 @@
+﻿<Page x:Class="SimpleMVVMWpf.Views.DataEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimpleMVVMWpf.Views"
+      mc:Ignorable="d" 
+      xmlns:Behavior="clr-namespace:SimpleMVVMWpf.Behaviours"
+      DataContext="{Binding DataEditPageViewModel, Source={StaticResource ViewModelLocator}}"
+      Height="250" Width="500"
+      Title="DataEditPage">
+
+    <Grid TextBlock.FontSize="20"
+          Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="이름 :" />
+                <TextBox Text="{Binding EditSampleModel.Name}"
+                         Width="300" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="나이 :"/>
+                <TextBox x:Name="xAgeTxt"
+                         Focusable="True"
+                         Text="{Binding EditSampleModel.Age}"
+                         Behavior:TextBoxValidationBehaviour.ValidationFunc="{Binding AgeValidationFunc}"
+                         Behavior:TextBoxValidationBehaviour.Validation="{Binding AgeValidation, UpdateSourceTrigger=PropertyChanged}"
+                         Behavior:TextBoxValidationBehaviour.IsValidationSuccess="{Binding IsValidationSuccess}"
+                         Width="300"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.Row="1"
+                Height="35"
+                Content="확인"
+                Command="{Binding UpdateCommand}"/>
+    </Grid>
+</Page>

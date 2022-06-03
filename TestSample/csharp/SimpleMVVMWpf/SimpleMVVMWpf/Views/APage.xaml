@@ -1,0 +1,77 @@
+﻿<Page x:Class="SimpleMVVMWpf.Views.APage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimpleMVVMWpf.Views"
+      xmlns:ct="clr-namespace:SimpleMVVMWpf.Common.Controls"
+      mc:Ignorable="d" 
+      DataContext="{Binding APageViewModel, Source={StaticResource ViewModelLocator}}"
+      Height="750" Width="1500"
+      Title="APage">
+
+    <Page.Resources>
+        <DataTemplate x:Key="dDataListBox" DataType="{x:Type ListBoxItem}">
+            <Grid Background="LightBlue"
+                  Width="200"
+                  Height="200">
+                <TextBlock Text="{Binding Name}" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    TextBlock.FontSize="20"
+                    Margin="10">
+            <TextBlock Text="행 :"
+                       Margin="0, 0, 10, 0"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="1"
+                    Margin="0, 0, 10, 0">
+                <TextBox x:Name="xTxtColumn"
+                         Text="1"
+                         Width="100"/>
+            </Border>
+            <TextBlock Text="간격 :"
+                       Margin="0, 0, 10, 0"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="1">
+                <TextBox x:Name="xTxtSpacingIdx"
+                         Text="1"
+                         Width="100"/>
+            </Border>
+        </StackPanel>
+
+        <ListBox x:Name="xDataList"
+                 Grid.Row="1"
+                 ItemsSource="{Binding MainViewModel.DataList, Source={StaticResource ViewModelLocator}}"
+                 ItemTemplate="{StaticResource dDataListBox}"
+                 HorizontalAlignment="Stretch"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 HorizontalContentAlignment="Stretch">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ct:SpacingPanel IsItemsHost="True"
+                                     Column="{Binding ElementName=xTxtColumn, Path=Text}"
+                                     SpacingIndex="{Binding ElementName=xTxtSpacingIdx, Path=Text}">
+                        </ct:SpacingPanel>
+                                     
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+
+        <Button Grid.Row="2"
+                Height="35"
+                Content="닫기"
+                Command="{Binding MainViewModel.PopUpCloseCommand, Source={StaticResource ViewModelLocator}}"/>
+    </Grid>
+</Page>

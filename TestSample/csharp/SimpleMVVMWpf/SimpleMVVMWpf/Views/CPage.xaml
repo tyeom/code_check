@@ -1,0 +1,45 @@
+﻿<Page x:Class="SimpleMVVMWpf.Views.CPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimpleMVVMWpf.Views"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:Behavior="clr-namespace:SimpleMVVMWpf.Behaviours"
+      mc:Ignorable="d" 
+      DataContext="{Binding CPageViewModel, Source={StaticResource ViewModelLocator}}"
+      Height="750" Width="1500"
+      Title="CPage">
+
+    <Grid x:Name="xMainGrid">
+        <ItemsControl x:Name="xPolygonCanvas"
+                      Background="LightYellow"
+                      ItemsSource="{Binding PolygonList, Mode=TwoWay}">
+
+            <i:Interaction.Behaviors>
+                <Behavior:MouseBehaviour MouseX="{Binding MouseX, Mode=OneWayToSource}"
+                                         MouseY="{Binding MouseY, Mode=OneWayToSource}"/>
+            </i:Interaction.Behaviors>
+
+            <ItemsControl.InputBindings>
+                <MouseBinding Gesture="LeftClick" Command="{Binding StartDrawingCommand}"/>
+                <MouseBinding MouseAction="RightClick" Command="{Binding EndDrawingCommand}"/>
+            </ItemsControl.InputBindings>
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Polygon Canvas.Top="{Binding Top, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             Canvas.Left="{Binding Left, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             Points="{Binding Points, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             Fill="Blue"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas IsItemsHost="True"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </Grid>
+</Page>
