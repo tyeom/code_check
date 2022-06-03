@@ -1,0 +1,5 @@
+C:\framework4.5_WebSite\WebApp\SignalR_SelfHosting\WebApplicationSample\bin\WebApplicationSample.dll
+C:\framework4.5_WebSite\WebApp\SignalR_SelfHosting\WebApplicationSample\bin\WebApplicationSample.pdb
+C:\framework4.5_WebSite\WebApp\SignalR_SelfHosting\WebApplicationSample\obj\Debug\WebApplicationSample.dll
+C:\framework4.5_WebSite\WebApp\SignalR_SelfHosting\WebApplicationSample\obj\Debug\WebApplicationSample.pdb
+C:\framework4.5_WebSite\WebApp\SignalR_SelfHosting\WebApplicationSample\obj\Debug\WebApplicationSample.csprojResolveAssemblyReference.cache

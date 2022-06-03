@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFaceDetection", "SuperFaceDetection.csproj", "{0CF469C5-46EB-45DF-B2C9-84E48B47922E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Debug|x64.ActiveCfg = Debug|x64
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Debug|x64.Build.0 = Debug|x64
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Debug|x86.ActiveCfg = Debug|x86
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Debug|x86.Build.0 = Debug|x86
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Release|x64.ActiveCfg = Release|x64
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Release|x64.Build.0 = Release|x64
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Release|x86.ActiveCfg = Release|x86
+		{0CF469C5-46EB-45DF-B2C9-84E48B47922E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F79E389-48FB-4B65-9B2A-AD5F138F4352}
+	EndGlobalSection
+EndGlobal

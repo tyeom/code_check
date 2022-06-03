@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.SignalR.SelfHost</id>
+    <version>2.0.0-rc1</version>
+    <title>Microsoft ASP.NET SignalR Self Host</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/signalr_prerelease.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/signalr</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A client and server side library for .NET that provides messaging and an abstraction over a persistent connection. This package pulls in the required dependencies for self-hosting SignalR in a process outside of IIS using OWIN and HTTPListener.</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>Microsoft AspNet SignalR AspNetSignalR SelfHost</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.SignalR.Core" version="2.0.0-rc1" />
+      <dependency id="Microsoft.Owin.SelfHost" version="2.0.0-rc1" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
