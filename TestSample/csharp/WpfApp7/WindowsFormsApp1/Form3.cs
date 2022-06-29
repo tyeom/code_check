@@ -328,7 +328,7 @@ namespace WindowsFormsApp1
         // graph의 size
         bool[] visited = new bool[6];
 
-        // 3. DFS (재귀 사용)
+        // 3.1. graph1 탐색 DFS (재귀 사용)
         public void DFSByGraph1(int start)
         {
             Console.WriteLine(start);
@@ -349,6 +349,7 @@ namespace WindowsFormsApp1
             }
         }
 
+        // 3.2. graph2 탐색 DFS (재귀 사용)
         public void DFSByGraph2(int start)
         {
             Console.WriteLine(start);
