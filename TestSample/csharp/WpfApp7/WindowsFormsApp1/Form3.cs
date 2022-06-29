@@ -185,13 +185,17 @@ namespace WindowsFormsApp1
 
         private async Task<string> Foo()
         {
-            await Task.Run(() =>
-            {
-                Thread.Sleep(4000);
-                return "aaaa";
-            }).ConfigureAwait(false);
+            //await Task.Run(() =>
+            //{
+            //    Thread.Sleep(4000);
+            //    return "aaaa";
+            //}).ConfigureAwait(false);
 
-            int a = 11;
+            //int a = 11;
+
+            await Task.Yield();
+
+            return "aaawwww";
 
             return await Task.Run(() =>
             {
@@ -220,23 +224,23 @@ namespace WindowsFormsApp1
 
 
 
+        //private async void button1_Click(object sender, EventArgs e)
+        //{
+        //    var aa = await AsyncProcess();
+        //    MessageBox.Show(aa);
+        //}
+
         private async void button1_Click(object sender, EventArgs e)
         {
-            var aa = await AsyncProcess();
-            MessageBox.Show(aa);
+            var t = await this.Foo();
+            //string aaa = await t;
+            //string bbb = await this.qq();
+
+            using (Form5 f5 = new Form5())
+            {
+                f5.ShowDialog();
+            }
         }
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    var t = this.Foo();
-        //    string aaa = t.Result;
-        //    //string bbb = await this.qq();
-
-        //    using (Form5 f5 = new Form5())
-        //    {
-        //        f5.ShowDialog();
-        //    }
-        //}
 
         private async void f1()
         {
@@ -291,8 +295,125 @@ namespace WindowsFormsApp1
         AsyncLocal<string> _asyncLocal = new AsyncLocal<string>();
         ThreadLocal<string> _threadLocal = new ThreadLocal<string>();
 
+
+        List<Task> taskList = new List<Task>();
+
+
+        // DFS 알고리즘 ----------------------------------
+
+        // https://jiwanm.github.io/algorithm%20lesson%202/chapter4-2/ 참고
+
+        // 1. Graph : 행렬 형태의 그래프, 1 로 된 X좌표의 index는 연결된 노드 위치(Y좌표)를 뜻함.
+        int[,] graph1 = new int[6, 6]
+        {
+            { 0, 1, 0, 1, 0, 0 },
+            { 1, 0, 1, 1, 0, 0 },
+            { 0, 1, 0, 0, 0, 0 },
+            { 1, 1, 0, 0, 0, 0 },
+            { 0, 0, 0, 0, 0, 1 },
+            { 0, 0, 0, 0, 1, 0 }
+        };
+
+        // 1.2 Graph : 그래프는 다른 선형구조처럼 클래스로 구현되어있지 않아 사용자가 편한 대로 구현하면 된다.
+        List<int>[] graph2 = new List<int>[]{
+                new List<int>(){1, 3},
+                new List<int>(){0, 2, 3},
+                new List<int>(){1},
+                new List<int>(){0, 1, 4},
+                new List<int>(){3,5},
+                new List<int>(){4}
+            };
+
+        // 2. 탐색여부를 체크할 boolean array : 해당 array가 모두 true 값이 될 때, 종료조건이 된다.
+        // graph의 size
+        bool[] visited = new bool[6];
+
+        // 3. DFS (재귀 사용)
+        public void DFSByGraph1(int start)
+        {
+            Console.WriteLine(start);
+            // 방문
+            visited[start] = true;
+
+            for (int next = 0; next < 6; next++)
+            {
+                // 연결되어 있지 않은 노드 스킵
+                if (graph1[start, next] == 0)
+                    continue;
+
+                // 이미 방문한 노드 스킵
+                if (visited[next])
+                    continue;
+
+                this.DFSByGraph1(next);
+            }
+        }
+
+        public void DFSByGraph2(int start)
+        {
+            Console.WriteLine(start);
+            // 방문
+            visited[start] = true;
+
+            foreach (int next in graph2[start])
+            {
+                // 이미 방문한 노드 스킵
+                if (visited[next])
+                    continue;
+
+                this.DFSByGraph2(next);
+            }
+        }
+
+        // 그래프가 중간에 끊겨있을 경우를 대비해 모든 노드를 탐색하는 알고리즘
+        public void SearchAll()
+        {
+            visited = new bool[6];
+            for (int now = 0; now < 6; now++)
+            {
+                if (visited[now] == false)
+                    DFSByGraph1(now);
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
+            // 2번째 index의 나열된 노드부터 탐색 시작으로 연결된 모든 노드 탐색
+            this.DFSByGraph1(2);
+            this.DFSByGraph2(2);
+
+
+
+
+
+
+
+
+
+
+            foreach (int idx in Enumerable.Range(0, 10))
+            {
+                try
+                {
+                    taskList.Add(Task.Run(() => { System.Threading.Thread.Sleep(1500); Console.WriteLine(idx); }));
+                }
+                catch(Exception ex)
+                {
+                    //
+                }
+            }
+
+            Task.WaitAll(taskList.ToArray(), TimeSpan.FromSeconds(5));
+            //taskList.RemoveAt(0);
+            //taskList.RemoveAt(1);
+            //taskList.RemoveAt(2);
+            taskList.Clear();
+
+
+            return;
+
+
+
             EntryAsyncVoid();
             //Async_f1();
             //Async_f2();
