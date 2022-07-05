@@ -270,14 +270,14 @@ namespace WindowsFormsApp1
             //Thread.Sleep(10);
             //_isBusy = false;
 
-            //Task.Run(this.Worker);
-            //await Task.Delay(10);
-            //_isBusy = false;
-
-
             Task.Run(this.Worker);
             await Task.Delay(10);
-            Volatile.Write(ref _isBusy, false);  // Volatile.Write() / Volatile.Read() 대신에 _isBusy 맴버 필드에 volatile키워드를 사용해도 된다.
+            _isBusy = false;
+
+
+            //Task.Run(this.Worker);
+            //await Task.Delay(10);
+            //Volatile.Write(ref _isBusy, false);  // Volatile.Write() / Volatile.Read() 대신에 _isBusy 맴버 필드에 volatile키워드를 사용해도 된다.
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -289,14 +289,17 @@ namespace WindowsFormsApp1
         private void Worker()
         {
             int count = 0;
-            //while (_isBusy)
+            
+            while (_isBusy)
+            {
+                //Console.WriteLine(_isBusy);
+                count++;
+            }
+            //while (Volatile.Read(ref _isBusy) == true)
             //{
             //    count++;
             //}
-            while (Volatile.Read(ref _isBusy) == true)
-            {
-                count++;
-            }
+            
             Console.WriteLine($"count : {count}");
         }
     }
