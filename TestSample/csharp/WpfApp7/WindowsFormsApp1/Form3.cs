@@ -377,8 +377,26 @@ namespace WindowsFormsApp1
             }
         }
 
+        private async void Task1()
+        {
+            //System.Threading.Thread.Sleep(5000);
+            await Task.Delay(1000);
+            Console.WriteLine("Task1");
+        }
+
+        private async void Task2()
+        {
+            await Task.Delay(1000);
+            Console.WriteLine("Task2");
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Task1();
+            this.Task2();
+
+            return;
+
             // 2번째 index의 나열된 노드부터 탐색 시작으로 연결된 모든 노드 탐색
             this.DFSByGraph1(2);
             this.DFSByGraph2(2);

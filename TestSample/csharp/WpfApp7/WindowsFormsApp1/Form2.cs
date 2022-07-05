@@ -261,5 +261,43 @@ namespace WindowsFormsApp1
         {
             dataProcess.CancelAsync(guid);
         }
+
+        private bool _isBusy = true;  // volatile 키워드로 최적화 X 처리 가능
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            //Task.Run(this.Worker);
+            //Thread.Sleep(10);
+            //_isBusy = false;
+
+            //Task.Run(this.Worker);
+            //await Task.Delay(10);
+            //_isBusy = false;
+
+
+            Task.Run(this.Worker);
+            await Task.Delay(10);
+            Volatile.Write(ref _isBusy, false);  // Volatile.Write() / Volatile.Read() 대신에 _isBusy 맴버 필드에 volatile키워드를 사용해도 된다.
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            _isBusy = false;
+        }
+
+
+        private void Worker()
+        {
+            int count = 0;
+            //while (_isBusy)
+            //{
+            //    count++;
+            //}
+            while (Volatile.Read(ref _isBusy) == true)
+            {
+                count++;
+            }
+            Console.WriteLine($"count : {count}");
+        }
     }
 }
