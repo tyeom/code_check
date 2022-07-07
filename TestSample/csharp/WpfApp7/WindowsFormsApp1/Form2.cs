@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -280,11 +282,29 @@ namespace WindowsFormsApp1
             //Volatile.Write(ref _isBusy, false);  // Volatile.Write() / Volatile.Read() 대신에 _isBusy 맴버 필드에 volatile키워드를 사용해도 된다.
         }
 
+        CAS_Lock _cas = new CAS_Lock();
         private void button5_Click(object sender, EventArgs e)
         {
-            _isBusy = false;
+            Enumerable.Range(0, 10).ToList().ForEach(item =>
+            {
+                Task.Run(this.Worker2);
+            });
         }
 
+        private void Worker2()
+        {
+            _cas.Lock();
+
+            Console.WriteLine($"Lock 획득! - id : {System.Threading.Thread.CurrentThread.ManagedThreadId} / {DateTime.Now.Second}");
+            Thread.Sleep(1000);
+
+            _cas.Free();
+        }
+
+        private void T2_Worker()
+        {
+
+        }
 
         private void Worker()
         {
@@ -302,5 +322,91 @@ namespace WindowsFormsApp1
             
             Console.WriteLine($"count : {count}");
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.FalseSharingEx();
+            //this.FalseSharingEx_Solution();
+        }
+
+        SomeData _data;
+        private void FalseSharingEx()
+        {
+            int size = Marshal.SizeOf(typeof(SomeData));
+            Console.WriteLine(size);
+
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            // 싱글 스레드 처리가 더 빠름
+            //this.DoWork1();
+            //this.DoWork2();
+
+            // False sharing 현상이 발생되면 싱글 스레드 보다 아래 병렬처리가 더 느림
+            Parallel.Invoke(
+                () => this.DoWork1(),
+                () => this.DoWork2());
+
+            sw.Stop();
+
+            Console.WriteLine($"SomeData - num1: {_data.num1}");
+            Console.WriteLine($"SomeData - num2: {_data.num2}");
+            Console.WriteLine($"elapsed time : {sw.Elapsed}");
+        }
+
+        private void DoWork1()
+        {
+            int tmpNum1 = 0;  // False sharing 해결방법 2 [로컬 변수 사용]
+            for (int i = 0; i < Int32.MaxValue; i++)
+            {
+                tmpNum1 = _data.num1 + i;
+               // _data.num1 += i;
+            }
+            _data.num1 = tmpNum1;
+        }
+
+        private void DoWork2()
+        {
+            int tmpNum2 = 0;  // False sharing 해결방법 2 [로컬 변수 사용]
+            for (int i = 0; i < Int32.MaxValue; i++)
+            {
+                tmpNum2 = _data.num2 + i;
+                //_data.num2 += i;
+            }
+            _data.num2 = tmpNum2;
+        }
+    }
+
+    public class CAS_Lock
+    {
+        // 0 = false
+        // 1 = true
+        private volatile int _lock = 0;
+
+        public void Lock()
+        {
+            while(true)
+            {
+                if(Interlocked.CompareExchange(ref _lock, 1, 0) == 0)
+                {
+                    return;
+                }
+            }
+        }
+
+        public void Free()
+        {
+            _lock = 0;
+        }
+    }
+
+    // False sharing 해결방법 1 [필드에 패딩값을 주어 메모리 할당 위치를 캐시라인 크기보다 멀게 설정해준다.]
+    //[StructLayout(LayoutKind.Explicit)]
+    public struct SomeData
+    {
+        //[FieldOffset(0)]
+        public int num1;  // size : 4
+        //[FieldOffset(512)]
+        public int num2;  // size : 4
     }
 }
