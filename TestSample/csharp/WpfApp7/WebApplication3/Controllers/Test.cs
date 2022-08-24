@@ -55,9 +55,33 @@ namespace WebApplication3.Controllers
         //                        Artist = album.Artist,
         //                        SongList.
         //                    }).FirstOrDefaultAsync();
-      
+
 
         //    return albumObj;
         //}
+
+        [HttpGet("SlowTest")]
+        public async Task<string> SlowTest(CancellationToken token)
+        {
+            Console.WriteLine("Starting to do slow work");
+
+            for (var i = 0; i < 10; i++)
+            {
+                if(token.IsCancellationRequested)
+                {
+                    Console.WriteLine("Cancel");
+                    token.ThrowIfCancellationRequested();
+                }
+                
+                Thread.Sleep(1000);
+            }
+
+            // slow async action, e.g. call external api
+            //await Task.Delay(10_000, token);
+
+            var message = "Finished slow delay of 10 seconds.";
+
+            return message;
+        }
     }
 }

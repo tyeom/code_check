@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WebApplication3;
 using WebApplication3.DataContext;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,6 +34,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+// middleware Ãß°¡
+app.UseMiddleware<CancelMiddleware>();
 
 app.MapControllers();
 
