@@ -13,42 +13,42 @@
                 Width="800"
                 Height="800"
                 IsLocalImg="True"
-                isFileCache="True"
+                IsFileCache="True"
                 Url="http://arong.info:7004/articlesImage/test.bmp"/>
             
                 <local:AsyncNetworkImageControl
                 Width="800"
                 Height="800"
                 IsLocalImg="True"
-                isFileCache="True"
+                IsFileCache="True"
                 Url="http://arong.info:7004/articlesImage/articles_1670828862799.jpg"/>
             
             <local:AsyncNetworkImageControl
                 Width="500"
                 Height="800"
                 IsLocalImg="True"
-                isFileCache="True"
+                IsFileCache="True"
                 Url="http://arong.info:7004/articlesImage/articles_1670819190396.jpg"/>
 
             <local:AsyncNetworkImageControl
                 Width="500"
                 Height="800"
                 IsLocalImg="True"
-                isFileCache="True"
+                IsFileCache="True"
                 Url="http://arong.info:7004/articlesImage/KakaoTalk_20221226_160032986.jpg"/>
 
             <local:AsyncNetworkImageControl
                 Width="500"
                 Height="800"
                 IsLocalImg="True"
-                isFileCache="True"
+                IsFileCache="True"
                 Url="http://arong.info:7004/articlesImage/KakaoTalk_20221226_155955866.jpg"/>
 
              <local:AsyncNetworkImageControl
                 Width="500"
                 Height="800"
                 IsLocalImg="True"
-                isFileCache="True"
+                IsFileCache="True"
                 Url="http://arong.info:7004/articlesImage/articles_1670918122944.jpg"/>
             </StackPanel>
         </ScrollViewer>

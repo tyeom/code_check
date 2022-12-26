@@ -17,7 +17,7 @@ public class AsyncNetworkImageControl : Image
         set { SetValue(UrlProperty, value); }
     }
 
-    public int timeout
+    public int Timeout
     {
         get; set;
     } = 15;
@@ -27,7 +27,7 @@ public class AsyncNetworkImageControl : Image
         get; set;
     } = true;
 
-    public bool isFileCache
+    public bool IsFileCache
     {
         get; set;
     } = false;
@@ -41,10 +41,10 @@ public class AsyncNetworkImageControl : Image
         {
             BitmapImage? bitmapImage = await ImageHelper.CreateBitmapImage(e.NewValue?.ToString(),
                 asyncNetworkImageControl.IsLocalImg,
-                asyncNetworkImageControl.timeout,
-                asyncNetworkImageControl.isFileCache);
+                asyncNetworkImageControl.Timeout,
+                asyncNetworkImageControl.IsFileCache);
             asyncNetworkImageControl.Source = bitmapImage;
-            bitmapImage.Freeze();
+            bitmapImage?.Freeze();
         }
         catch (Exception ex)
         {
