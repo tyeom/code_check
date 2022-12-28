@@ -48,6 +48,7 @@ public class ImageHelper
         if (bitmapImg != null)
             return bitmapImg;
 
+        // 로컬에 이미지가 없다면 이미지 다운로드
         using (HttpClient client = new HttpClient(new HttpClientHandler { MaxConnectionsPerServer = 10 }))
         {
             // 타임아웃 CancellationToken
