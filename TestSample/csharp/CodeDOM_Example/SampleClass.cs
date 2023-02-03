@@ -70,47 +70,47 @@ namespace CodeDOM_Example
         public void AddProperties()
         {
             // Age 속성 생성
-            CodeMemberProperty widthProperty = new CodeMemberProperty();
+            CodeMemberProperty ageProperty = new CodeMemberProperty();
             // public 접근자로 설정
-            widthProperty.Attributes =
+            ageProperty.Attributes =
                 MemberAttributes.Public | MemberAttributes.Final;
             // 속성 이름
-            widthProperty.Name = "Age";
+            ageProperty.Name = "Age";
             // get 지정
-            widthProperty.HasGet = true;
+            ageProperty.HasGet = true;
             // Int16 타입으로 설정
-            widthProperty.Type = new CodeTypeReference(typeof(System.Int16));
+            ageProperty.Type = new CodeTypeReference(typeof(System.Int16));
             // 주석 추가
-            widthProperty.Comments.Add(new CodeCommentStatement("나이"));
+            ageProperty.Comments.Add(new CodeCommentStatement("나이"));
 
             // get 반환 필드 지정 [_ageValue]
-            widthProperty.GetStatements.Add(new CodeMethodReturnStatement(
+            ageProperty.GetStatements.Add(new CodeMethodReturnStatement(
                 new CodeFieldReferenceExpression(
                 new CodeThisReferenceExpression(), "_ageValue")));
 
             // 클래스에 속성 추가
-            _targetClass.Members.Add(widthProperty);
+            _targetClass.Members.Add(ageProperty);
 
             // Name 속성 생성
-            CodeMemberProperty heightProperty = new CodeMemberProperty();
+            CodeMemberProperty nameProperty = new CodeMemberProperty();
             // public 접근자로 설정
-            heightProperty.Attributes =
+            nameProperty.Attributes =
                 MemberAttributes.Public | MemberAttributes.Final;
             // 속성 이름
-            heightProperty.Name = "Name";
-            heightProperty.HasGet = true;
+            nameProperty.Name = "Name";
+            nameProperty.HasGet = true;
             // String 타입으로 설정
-            heightProperty.Type = new CodeTypeReference(typeof(System.String));
+            nameProperty.Type = new CodeTypeReference(typeof(System.String));
             // 주석 추가
-            heightProperty.Comments.Add(new CodeCommentStatement("이름"));
+            nameProperty.Comments.Add(new CodeCommentStatement("이름"));
 
             // get 반환 필드 지정 [_nameValue]
-            heightProperty.GetStatements.Add(new CodeMethodReturnStatement(
+            nameProperty.GetStatements.Add(new CodeMethodReturnStatement(
                 new CodeFieldReferenceExpression(
                 new CodeThisReferenceExpression(), "_nameValue")));
 
             // 클래스에 속성 추가
-            _targetClass.Members.Add(heightProperty);
+            _targetClass.Members.Add(nameProperty);
 
             // 읽기 전용 속성 생성
             CodeMemberProperty introductionProperty = new CodeMemberProperty();
