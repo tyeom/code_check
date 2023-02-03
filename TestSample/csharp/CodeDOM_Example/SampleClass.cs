@@ -52,18 +52,18 @@ namespace CodeDOM_Example
             _targetClass.Members.Add(ageValueField);
 
             // Private 필드 생성
-            CodeMemberField heightValueField = new CodeMemberField();
+            CodeMemberField nameValueField = new CodeMemberField();
             // Private 접근자로 설정
-            heightValueField.Attributes = MemberAttributes.Private;
+            nameValueField.Attributes = MemberAttributes.Private;
             // 필드 이름
-            heightValueField.Name = "_nameValue";
+            nameValueField.Name = "_nameValue";
             // String 타입으로 설정
-            heightValueField.Type =
+            nameValueField.Type =
                 new CodeTypeReference(typeof(System.String));
             // 주석 추가
-            heightValueField.Comments.Add(new CodeCommentStatement("이름"));
+            nameValueField.Comments.Add(new CodeCommentStatement("이름"));
             // 클래스에 맴버 필드로 추가
-            _targetClass.Members.Add(heightValueField);
+            _targetClass.Members.Add(nameValueField);
         }
 
         // 속성 추가
