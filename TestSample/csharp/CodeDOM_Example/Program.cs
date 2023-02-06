@@ -17,7 +17,10 @@ namespace CodeDOM_Example
             sample.AddMethod();
             sample.AddConstructor();
             sample.AddEntryPoint(20, "테스트");
-            sample.GenerateCSharpCode();
+            // 파일로 생성
+            //sample.GenerateCSharpCodeFile();
+            // 코드 생성 output
+            string sourceCode = sample.GenerateCSharpCode();
 
             Console.WriteLine("코드 생성 완료");
 
@@ -29,8 +32,10 @@ namespace CodeDOM_Example
             param.GenerateInMemory = true;
 
             // 생성된 소스코드 컴파일
+            //CompilerResults results =
+            //    codeDom.CompileAssemblyFromSource(param, System.IO.File.ReadAllText("SampleCode.cs"));
             CompilerResults results =
-                codeDom.CompileAssemblyFromSource(param, System.IO.File.ReadAllText("SampleCode.cs"));
+                codeDom.CompileAssemblyFromSource(param, sourceCode);
 
             // 컴파일 실패시
             if (results.Errors.Count > 0)

@@ -3,6 +3,7 @@ using System.CodeDom;
 using System.CodeDom.Compiler;
 using System.IO;
 using System.Reflection;
+using System.Text;
 
 namespace CodeDOM_Example
 {
@@ -234,7 +235,7 @@ namespace CodeDOM_Example
             _targetClass.Members.Add(start);
         }
 
-        public void GenerateCSharpCode()
+        public void GenerateCSharpCodeFile()
         {
             CodeDomProvider provider = CodeDomProvider.CreateProvider("CSharp");
             CodeGeneratorOptions options = new CodeGeneratorOptions();
@@ -243,6 +244,20 @@ namespace CodeDOM_Example
             {
                 provider.GenerateCodeFromCompileUnit(_targetUnit, sourceWriter, options);
             }
+        }
+
+        public string GenerateCSharpCode()
+        {
+            CodeDomProvider provider = CodeDomProvider.CreateProvider("CSharp");
+            CodeGeneratorOptions options = new CodeGeneratorOptions();
+            options.BracingStyle = "C";
+            StringBuilder builder = new StringBuilder();
+            using (StringWriter sourceWriter = new StringWriter(builder))
+            {
+                provider.GenerateCodeFromCompileUnit(_targetUnit, sourceWriter, options);
+            }
+
+            return builder.ToString();
         }
     }
 }
