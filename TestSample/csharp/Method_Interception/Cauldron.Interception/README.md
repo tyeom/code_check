@@ -1,0 +1,1 @@
+#### Fody - Cauldron.Interception Example
