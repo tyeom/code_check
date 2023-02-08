@@ -1,0 +1,13 @@
+﻿<Application x:Class="TPL_DataFlowBroadCasting_Example.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TPL_DataFlowBroadCasting_Example"
+             xmlns:views="clr-namespace:TPL_DataFlowBroadCasting_Example.Views"
+             xmlns:dataContext="clr-namespace:TPL_DataFlowBroadCasting_Example.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type dataContext:StockInfoViewModel}">
+            <views:StockInfoView />
+        </DataTemplate>
+    </Application.Resources>
+</Application>

@@ -7,3 +7,12 @@ C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Pla
 C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.dll
 C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.pdb
 C:\Users\banaple_43\source\repos\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.csproj.AssemblyReference.cache
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\bin\Debug\Reversi_Playlogic.dll
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\bin\Debug\Reversi_Playlogic.pdb
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\bin\Debug\Play.dll
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\bin\Debug\Play.pdb
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.csproj.AssemblyReference.cache
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.csproj.CoreCompileInputs.cache
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.csproj.CopyComplete
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.dll
+F:\code_check\TestSample\csharp\WpfApp7\Reversi_Playlogic\obj\Debug\Reversi_Playlogic.pdb
