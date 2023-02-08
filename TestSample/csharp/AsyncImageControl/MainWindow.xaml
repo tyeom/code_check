@@ -1,0 +1,56 @@
+﻿<Window x:Class="AsyncImageControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncImageControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="650">
+    <Grid>
+        <ScrollViewer>
+        <StackPanel Orientation="Vertical">
+                <local:AsyncNetworkImageControl
+                Width="800"
+                Height="800"
+                IsLocalImg="True"
+                IsFileCache="True"
+                Url="http://arong.info:7004/articlesImage/test.bmp"/>
+            
+                <local:AsyncNetworkImageControl
+                Width="800"
+                Height="800"
+                IsLocalImg="True"
+                IsFileCache="True"
+                Url="http://arong.info:7004/articlesImage/articles_1670828862799.jpg"/>
+            
+            <local:AsyncNetworkImageControl
+                Width="500"
+                Height="800"
+                IsLocalImg="True"
+                IsFileCache="True"
+                Url="http://arong.info:7004/articlesImage/articles_1670819190396.jpg"/>
+
+            <local:AsyncNetworkImageControl
+                Width="500"
+                Height="800"
+                IsLocalImg="True"
+                IsFileCache="True"
+                Url="http://arong.info:7004/articlesImage/KakaoTalk_20221226_160032986.jpg"/>
+
+            <local:AsyncNetworkImageControl
+                Width="500"
+                Height="800"
+                IsLocalImg="True"
+                IsFileCache="True"
+                Url="http://arong.info:7004/articlesImage/KakaoTalk_20221226_155955866.jpg"/>
+
+             <local:AsyncNetworkImageControl
+                Width="500"
+                Height="800"
+                IsLocalImg="True"
+                IsFileCache="True"
+                Url="http://arong.info:7004/articlesImage/articles_1670918122944.jpg"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

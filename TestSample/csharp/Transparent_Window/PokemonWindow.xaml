@@ -1,0 +1,19 @@
+﻿<Window x:Class="Transparent_Window.PokemonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Transparent_Window"
+        mc:Ignorable="d"
+        Width="100"
+        Height="100"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="#01000000"
+        MouseMove="Window_MouseMove"
+        Topmost="{Binding Source={x:Static local:AppSetting.Instance}, Path=IsTopMost, Mode=TwoWay, NotifyOnTargetUpdated=True}"
+        ShowInTaskbar="False">
+    <Grid>
+        <Image x:Name="xPokemon"/>
+    </Grid>
+</Window>
