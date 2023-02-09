@@ -42,5 +42,10 @@
         {
             get;set;
         }
+
+        /// <summary>
+        /// DrawWindow 표시 되어있는지 여부
+        /// </summary>
+        public bool IsShowDrawWindow { get; set; }
     }
 }

@@ -1,0 +1,22 @@
+﻿<Window x:Class="Transparent_Window.DrawWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Transparent_Window"
+        mc:Ignorable="d"
+        x:Name="xMainWindow"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="#01000000"
+        Topmost="{Binding Source={x:Static local:AppSetting.Instance}, Path=IsTopMost, Mode=TwoWay, NotifyOnTargetUpdated=True}"
+        WindowState="Maximized"
+        ShowInTaskbar="False">
+    <Canvas x:Name="xCanvas"
+            IsHitTestVisible="True"
+            Background="Transparent"
+            Width="{Binding ElementName=xMainWindow, Path=ActualWidth}"
+            Height="{Binding ElementName=xMainWindow, Path=ActualHeight}">
+        
+    </Canvas>
+</Window>

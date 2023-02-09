@@ -120,10 +120,27 @@
                 this.CloseAll();
             };
 
-            // 네번째 메뉴 '종료' MenuItem 생성
+            // 다섯번째 메뉴 '그리기' MenuItem 생성
             System.Windows.Forms.MenuItem menu5 = new System.Windows.Forms.MenuItem();
-            menu5.Text = "종료";
+            menu5.Text = "그리기";
             menu5.Click += (_, __) =>
+            {
+                DrawWindow drawWindow = new DrawWindow();
+                drawWindow.Show();
+            };
+
+            // 여섯번째 메뉴 '그리기 창 닫기' MenuItem 생성
+            System.Windows.Forms.MenuItem menu6 = new System.Windows.Forms.MenuItem();
+            menu6.Text = "그리기 창 닫기";
+            menu6.Click += (_, __) =>
+            {
+                this.CloseDrawWin();
+            };
+
+            // 일곱번째 메뉴 '종료' MenuItem 생성
+            System.Windows.Forms.MenuItem menu7 = new System.Windows.Forms.MenuItem();
+            menu7.Text = "종료";
+            menu7.Click += (_, __) =>
             {
                 this.Close();
             };
@@ -133,6 +150,8 @@
             menu.MenuItems.Add(menu3);
             menu.MenuItems.Add(menu4);
             menu.MenuItems.Add(menu5);
+            menu.MenuItems.Add(menu6);
+            menu.MenuItems.Add(menu7);
 
             return menu;
         }
@@ -145,6 +164,10 @@
                 {
                     pokemonWin.SetWindowExTransparent();
                 }
+                if (win is DrawWindow drawWindow)
+                {
+                    drawWindow.SetWindowExTransparent();
+                }
             }
         }
 
@@ -156,6 +179,18 @@
                 {
                     pokemonWin.Dispose();
                     pokemonWin.Close();
+                }
+            }
+        }
+
+        private void CloseDrawWin()
+        {
+            foreach (var win in App.Current.Windows)
+            {
+                if (win is DrawWindow drawWindow)
+                {
+                    drawWindow.Dispose();
+                    drawWindow.Close();
                 }
             }
         }
