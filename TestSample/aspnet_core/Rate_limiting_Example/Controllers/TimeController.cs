@@ -6,7 +6,7 @@
     using Rate_limiting_Example.Services;
 
     [ApiController]
-    [EnableRateLimiting("customLimiter")]
+    [EnableRateLimiting("CustomLimiter")]
     public class TimeController : Controller
     {
         private readonly IGetTimeService _service;

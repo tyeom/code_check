@@ -16,9 +16,9 @@
         public CustomRateLimiterPolicy(IOptions<MyRateLimitOptions> options)
         {
             // 요청이 속도 제한 초과시 호출되는 OnRejected 콜백
-            _onRejected = (ctx, token) =>
+            _onRejected = (context, cancellationToken) =>
             {
-                ctx.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
+                context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
                 return ValueTask.CompletedTask;
             };
             _options = options.Value;
